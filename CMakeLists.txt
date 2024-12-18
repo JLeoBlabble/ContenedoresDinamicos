@@ -18,5 +18,11 @@ add_executable(Ejercicio4
 add_executable(Ejercicio5
         C++Moderno.cpp)
 
+find_package(Boost REQUIRED)
+
+include_directories(${Boost_INCLUDE_DIRS})
+
 add_executable(Ejercicio6
         IntroduccionBoost.cpp)
+
+target_link_libraries(Ejercicio6 ${Boost_LIBRARIES})
